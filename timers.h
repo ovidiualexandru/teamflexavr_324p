@@ -6,7 +6,8 @@ Hardware timer setup library.
 /*
  * Enumeration for all 8-bit timer operation modes.
  */
-typedef enum {TIMER8_WGM_NORMAL,
+typedef enum __attribute__ ((__packed__))
+                {TIMER8_WGM_NORMAL,
                 TIMER8_WGM_FASTPWM_8BIT, TIMER8_WGM_FASTPWM_OCRA,
                 TIMER8_WGM_PCPWM_8BIT,  TIMER8_WGM_PCPWM_OCRA,
                 TIMER8_WGM_CTC} timer8_wgm_t;
@@ -14,7 +15,8 @@ typedef enum {TIMER8_WGM_NORMAL,
 /*
  * Enumeration for all 16-bit timer operation modes.
  */
-typedef enum {TIMER16_WGM_NORMAL,
+typedef enum  __attribute__ ((__packed__))
+                {TIMER16_WGM_NORMAL,
                 TIMER16_WGM_PCPWM_8BIT, TIMER16_WGM_PCPWM_9BIT,
                 TIMER16_WGM_PCPWM_10BIT, TIMER16_WGM_PCPWM_ICR,
                 TIMER16_WGM_PCPWM_OCRA,
@@ -29,14 +31,16 @@ typedef enum {TIMER16_WGM_NORMAL,
  * Fast PWM on Channel A, but can be used for any mode or channel. Read the
  * datasheet for more information, use with care.
  */
-typedef enum {TIMER8_COM_DISCONNECTED, TIMER8_COM_TOGGLE,
+typedef enum __attribute__ ((__packed__))
+                {TIMER8_COM_DISCONNECTED, TIMER8_COM_TOGGLE,
                 TIMER8_COM_NONINVERTED, TIMER8_COM_INVERTED} timer_com_t;
 
-typedef enum {TIMER16_PRESCALER_STOPPED, TIMER16_PRESCALER_1,
+typedef enum __attribute__ ((__packed__))
+              {TIMER16_PRESCALER_STOPPED, TIMER16_PRESCALER_1,
                 TIMER16_PRESCALER_8, TIMER16_PRESCALER_64,
                 TIMER16_PRESCALER_256, TIMER16_PRESCALER_1024,
-                TIMER16_PRESCALER_EXT_FALLING, TIMER16_PRESCALER_EXT_RISING
-              } timer_prescaler_t;
+                TIMER16_PRESCALER_EXT_FALLING, TIMER16_PRESCALER_EXT_RISING}
+              timer_prescaler_t;
 
 /*
  * Defines for 8-bit Timers Interrupts
