@@ -82,16 +82,16 @@ void Timer2_initialize(timer8_wgm_t wgm, timer_com_t comA, timer_com_t comB,
 /*
  * Start/change prescaler on Timer0.
  */
-void Timer0_prescaler(timer_prescaler_t prescaler);
+void Timer0_setPrescaler(timer_prescaler_t prescaler);
 
 
 /*
  * Start/change prescaler on Timer0.
  */
-void Timer1_prescaler(timer_prescaler_t prescaler);
+void Timer1_setPrescaler(timer_prescaler_t prescaler);
 
 
 /*
  * Start/change prescaler on Timer0.
  */
-void Timer2_prescaler(timer_prescaler_t prescaler);
+void Timer1_setPrescaler(timer_prescaler_t prescaler);
